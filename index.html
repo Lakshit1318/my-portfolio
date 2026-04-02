@@ -3,36 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Kayitha Lakshit</title>
+    <title>Lakshit | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Kayitha Lakshit</h1>
-        <p>CSE Student | Apollo University</p>
-    </header>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<section id="contact">
-    <h2>Get In Touch</h2>
-    <p>I am always open to discussing tech, law, or human rights advocacy.</p>
-    <div class="contact-links">
-        <a href="mailto:kayithalakshit@gmail.com" class="contact-btn">Email Me</a>
-        <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
-    </div>
-</section>
-<section id="education">
-    <h2>Education</h2>
-    <div class="edu-item">
-        <h3>B.Tech in Computer Science & Engineering</h3>
-        <p><strong>Apollo University</strong> | 2024 - 2028 (Expected)</p>
-        <ul>
-            <li>Focusing on Algorithms, Database Management, and Java Development.</li>
-        </ul>
-    </div>
-</section>
 
-<footer>
-    <p>&copy; 2026 Kayitha Lakshit | Built with HTML & CSS</p>
-</footer>
+    <nav>
+        <div class="nav-content">
+            <span class="logo">KL.</span>
+            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="hero">
+            <h1 class="gradient-text">Kayitha Lakshit</h1>
+            <p class="subtitle">CSE Student @ Apollo University | Tech & Human Rights Advocate</p>
+        </section>
+
+        <section id="skills">
+            <h3>Technical Arsenal</h3>
+            <div class="skills-grid">
+                <div class="skill-pill"><i class="fab fa-java"></i> Java</div>
+                <div class="skill-pill"><i class="fab fa-python"></i> Python</div>
+                <div class="skill-pill"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-pill"><i class="fab fa-html5"></i> HTML/CSS</div>
+                <div class="skill-pill"><i class="fas fa-code"></i> DSA in C</div>
+            </div>
+        </section>
+
+        <section id="featured">
+            <h3>Areas of Focus</h3>
+            <div class="grid">
+                <div class="glass-card">
+                    <i class="fas fa-scale-balanced icon"></i>
+                    <h4>Human Rights Law</h4>
+                    <p>Researching digital advocacy and legal protections in the modern era.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-terminal icon"></i>
+                    <h4>Software Engineering</h4>
+                    <p>Building scalable solutions and mastering data structures.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <a href="mailto:kayithalakshit@gmail.com" class="main-btn">Start a Conversation</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
