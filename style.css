@@ -1,0 +1,67 @@
+body {
+    font-family: 'Inter', sans-serif;
+    /* ... keep your other body styles ... */
+}
+.edu-item {
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.edu-item ul {
+    margin-top: 10px;
+    color: #666;
+}
+#contact {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.contact-btn:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 80px;
+    padding-bottom: 20px;
+}
+/* This triggers when the screen is smaller than 600px (Phones) */
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .skills-grid {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-btn {
+        display: block; /* Stacks buttons on top of each other */
+        margin: 10px 0;
+    }
+}
