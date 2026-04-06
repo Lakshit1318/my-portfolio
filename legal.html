@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nyaya-Search | Legal Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <div class="nav-content">
+        <a href="index.html" style="color: var(--accent); text-decoration: none; font-weight: bold;">← Back to Portfolio</a>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+    </div>
+</nav>
+
+<main class="container"> 
+    <h1 class="gradient-text">Nyaya-Search</h1>
+    <p class="subtitle">Search Indian Constitutional Rights & IPC Sections</p>
+    
+    <div class="search-box">
+        <input type="text" id="legal-input" placeholder="Try 'Freedom' or 'Article 21'...">
+        <button onclick="searchLaw()"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div id="results-area" class="grid">
+        </div>
+</main>
+
+    <script>
+        const lawDatabase = [
+            { id: "Art 14", title: "Equality before Law", desc: "The State shall not deny to any person equality before the law..." },
+            { id: "Art 19", title: "Freedom of Speech", desc: "Protection of certain rights regarding freedom of speech..." },
+            { id: "Art 21", title: "Right to Life", desc: "No person shall be deprived of his life or personal liberty..." },
+            { id: "Art 21A", title: "Right to Education", desc: "The State shall provide free and compulsory education..." },
+            { id: "Art 32", title: "Constitutional Remedies", desc: "The right to move the Supreme Court for enforcement..." },
+            { id: "IPC 300", title: "Murder", desc: "Definition of murder and conditions under which homicide is murder." },
+            { id: "IPC 378", title: "Theft", desc: "Intending to take dishonestly any movable property..." }
+        ];
+
+        function searchLaw() {
+            const input = document.getElementById('legal-input').value.toLowerCase();
+            const resultsArea = document.getElementById('results-area');
+            resultsArea.innerHTML = ""; 
+
+            const filtered = lawDatabase.filter(law => 
+                law.title.toLowerCase().includes(input) || 
+                law.id.toLowerCase().includes(input) ||
+                law.desc.toLowerCase().includes(input)
+            );
+
+            if (filtered.length === 0) {
+                resultsArea.innerHTML = "<p>No sections found. Try 'Article' or 'IPC'.</p>";
+                return;
+            }
+
+            filtered.forEach(law => {
+                resultsArea.innerHTML += `
+                    <div class="glass-card">
+                        <span class="tag">${law.id}</span>
+                        <h4>${law.title}</h4>
+                        <p>${law.desc}</p>
+                    </div>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
