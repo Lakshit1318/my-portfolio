@@ -64,7 +64,7 @@ body {
 }
 
 nav { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur(10px); }
-.nav-content { max-width: 900px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; }
+.nav-content { max-width: 900px; margin: 0 auto; padding:15px 20px; display: flex; justify-content: space-between; align-items: center;}
 
 #theme-toggle { background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.2rem; }
 
@@ -77,4 +77,23 @@ nav { position: fixed; top: 0; width: 100%; z-index: 1000; backdrop-filter: blur
     font-weight: 700;
     display: inline-block;
     box-shadow: 0 10px 30px rgba(0, 113, 227, 0.2);
+}
+/* Mobile Optimizations */
+@media (max-width: 600px) {
+    .container {
+        padding: 80px 15px; /* Less padding on sides for small screens */
+    }
+    
+    .search-box {
+        flex-direction: column; /* Stack input and button on top of each other */
+    }
+
+    .main-btn, #legal-input {
+        width: 100%; /* Make buttons full-width for easy tapping */
+        text-align: center;
+    }
+
+    .glass-card {
+        padding: 20px; /* Slightly smaller padding to save space */
+    }
 }
